@@ -1,0 +1,128 @@
+:root {
+  --primary: #111;
+  --background: #121212;
+  --text-color: #e0e0e0;
+  --accent: #d4af37;
+  --transition: 0.3s ease;
+}
+* {
+  margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;
+}
+body {
+  font-family: 'Merriweather', serif;
+  background: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+/* NAV */
+nav { position: fixed; top:0; width:100%; background:var(--primary); z-index:100; }
+.container { max-width:1100px; margin:auto; padding:0 1rem; }
+.nav-wrapper { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; }
+.nav-logo { font-family:'Playfair Display', serif; font-size:1.8rem; color:var(--accent); text-decoration:none; }
+.nav-links a { margin-left:1.5rem; color:#fff; text-decoration:none; transition:color var(--transition); }
+.nav-links a.active, .nav-links a:hover { color:var(--accent); }
+
+/* HERO */
+header { height:80vh; background:url('background.png') center/cover no-repeat; display:flex; align-items:center; justify-content:center; position:relative; }
+header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.hero h1 { position:relative; font-family:'Playfair Display', serif; font-size:4rem; color:var(--accent); background:none; padding-bottom:0.5rem; letter-spacing:1px; }
+.hero h1::after { content:''; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:60%; height:4px; background:var(--accent); border-radius:2px; }
+.hero p { font-size:1.3rem; color:#fff; margin-top:0.5rem; text-shadow:0 1px 4px rgba(0,0,0,0.6); }
+
+/* SECTIONS */
+main section { padding:4rem 0; }
+section h2 { font-family:'Playfair Display', serif; font-size:2.4rem; color:var(--accent); text-align:center; margin-bottom:1.5rem; }
+/* BASIC BOX */
+.about, .skills, .education, .projects, .contact { background:#1a1a1a; border-radius:8px; padding:2.5rem; margin-bottom:2rem; box-shadow:0 2px 12px rgba(0,0,0,0.4); transition:transform var(--transition); }
+.about:hover, .skills:hover, .education:hover, .projects:hover, .contact:hover { transform:translateY(-5px); }
+
+/* SKILLS */
+.skills ul { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; list-style:none; }
+.skills li { background:var(--background); padding:1rem; border-left:5px solid var(--accent); font-weight:500; }
+
+/* TIMELINE */
+.timeline { position:relative; padding-left:2.5rem; }
+.timeline::before { content:''; position:absolute; left:15px; top:0; bottom:0; width:4px; background:var(--accent); }
+.timeline-item { position:relative; margin-bottom:2.5rem; padding-left:1rem; }
+.timeline-item::before { content:''; position:absolute; left:-25px; top:5px; width:14px; height:14px; background:var(--accent); border-radius:50%; }
+
+/* CAROUSEL */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+}
+.carousel-track-container {
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.cert-item {
+  min-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.cert-item img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.cert-item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+/* Carousel buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+.prev { left: 1rem; }
+.next { right: 1rem; }
+
+/* CONTACT ICONS */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.contact-icons a {
+  color: var(--accent);
+  font-size: 1.8rem;
+  transition: color var(--transition);
+}
+.contact-icons a:hover {
+  color: #fff;
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cert-item { min-width: 80%; }
+  .carousel-btn { display: none; }
+}
