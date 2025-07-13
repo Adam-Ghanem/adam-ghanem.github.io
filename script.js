@@ -15,6 +15,15 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
+// Goto Top
+function scrollToTop(event) {
+  event.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
 // Scroll-spy for nav
 const links = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
