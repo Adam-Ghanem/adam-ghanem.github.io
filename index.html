@@ -4,16 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adam Ghanem</title>
-
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- AOS animations CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-  <!-- Font Awesome for Social Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pY1dKcY3rWMvS+3nDzsusmRzE8+2m2pNQq5XXrMf7LMfhjFaEb0G2X1uQ5Kqm0u6qOdBjD9dbdFURyru3nErNA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -22,7 +19,10 @@
   <!-- Navigation -->
   <nav>
     <div class="container nav-wrapper">
-      <a href="#about" class="nav-logo">Adam Ghanem</a>
+      <a href="#about" class="nav-logo">
+        <i class="fas fa-scale-balanced"></i>
+        Adam Ghanem
+      </a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -31,14 +31,27 @@
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </div>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
   <!-- Hero Header -->
   <header>
+    <div class="hero-bg"></div>
     <div class="hero">
-      <h1 data-aos="fade-down">Adam Ghanem</h1>
-      <p data-aos="fade-up" style="text-align: center;">Law Student & Cybersecurity Enthusiast</p>
+      <div class="hero-content">
+        <h1>Adam Ghanem</h1>
+        <p>Law Student & Cybersecurity Enthusiast</p>
+        <p>Combining legal expertise with technological innovation to shape the future of digital law</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -46,19 +59,25 @@
   <main class="container">
 
     <!-- About Me -->
-    <section id="about" data-aos="fade-right">
+    <section id="about">
       <h2>About Me</h2>
       <div class="about">
         <p>
-          I am a law student at Alexandria University combining legal studies with technology.
-          Skilled in Python, Linux administration, and foundational cybersecurity.
-          Currently completing CS50 for Lawyers.
+          I am a law student at Alexandria University combining legal studies with technology. Skilled in Python, Linux administration, foundational cybersecurity and complete CS50 for Lawyers.
+        </p>
+        <br>
+        <p>
+          My passion lies at the intersection of law and technology, where I explore how legal frameworks can adapt to the rapidly evolving digital landscape. I believe that understanding both domains is essential for addressing modern challenges in cybersecurity, digital rights, and technology governance.
+        </p>
+        <Br>
+        <p>
+          With a strong foundation in both legal principles and technical skills, I aim to bridge the gap between these two worlds and contribute to the development of innovative legal tech solutions.
         </p>
       </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" data-aos="fade-left">
+    <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
         <ul>
@@ -68,40 +87,71 @@
           <li>Cybersecurity Fundamentals</li>
           <li>CS50 for Lawyers (HarvardX)</li>
           <li>Arabic (Native) & English (A2–B1)</li>
+          <li>Legal Tech Solutions Development</li>
         </ul>
       </div>
     </section>
 
     <!-- Education -->
-    <section id="education" data-aos="fade-right">
+    <section id="education">
       <h2>Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Faculty of Law, Alexandria University</h3>
-          <p><em>2024 – Present</em></p>
-        </div>
-        <div class="timeline-item">
-          <h3>CS50 for Lawyers (HarvardX)</h3>
-          <p><em>2025 (In Progress)</em></p>
+      <div class="education">
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Faculty of Law, Alexandria University</h3>
+            <p>Bachelor of Laws (LLB)</p>
+            <span class="date">2024 – Present</span>
+          </div>
+          <div class="timeline-item">
+            <h3>CS50 for Lawyers (HarvardX)</h3>
+            <p>Introduction to computer science and programming for legal professionals</p>
+            <span class="date">2025</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" data-aos="fade-left">
+    <section id="projects">
       <h2>Projects</h2>
       <div class="projects">
-        <ul>
-          <li>
-            <strong>ElBasha App @ MIT</strong> — developed and published on GitHub:
-            <a href="https://github.com/AdamG00D/ElBasha_App" target="_blank">ElBasha</a>
-          </li>
-        </ul>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="projects/Cipher.png" alt="TheCipher App">
+            </div>
+            <div class="project-content">
+              <h3>TheCipher App</h3>
+              <p>A simple application for encrypting messages using AES, with the ability to change the key and store it on the phone.</p>
+              <a href="https://github.com/AdamG00D/TheCipher_App" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="projects/Blu.png" alt="BLU App">
+            </div>
+            <div class="project-content">
+              <h3>BLU App</h3>
+              <p>BLU is a simple Bluetooth-based chat app for Android devices, built with MIT App Inventor.</p>
+              <a href="https://github.com/AdamG00D/BLU_App" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="projects/Elbasha.png" alt="ElBasha App">
+            </div>
+            <div class="project-content">
+              <h3>ElBasha App</h3>
+              <p>Fake Police Voice Prank</p>
+              <a href="https://github.com/AdamG00D/ElBasha_App" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
+    
     <!-- Certificates Carousel -->
-    <section id="certificates" data-aos="fade-right">
+    <section id="certificates">
       <h2>Certificates</h2>
       <div class="carousel-container">
         <button class="carousel-btn prev" aria-label="Previous">&larr;</button>
@@ -109,70 +159,65 @@
           <div class="carousel-track">
             <div class="cert-item">
               <a href="https://www.sololearn.com/certificates/CT-J6JG79WJ" target="_blank">
-                <img src="certificates/Python_beginners.png" alt="CS50 for Lawyers Certificate">
+                <img src="certificates/Python_beginners.png" alt="Python Beginners Certificate">
               </a>
             </div>
             <div class="cert-item">
               <a href="https://www.sololearn.com/certificates/CT-ZPW7RY2S" target="_blank">
-                <img src="certificates/intermediate.png" alt="CS50 for Lawyers Certificate">
               </a>
+                <img src="certificates/intermediate.png" alt="Python Intermediate Certificate">
             </div>
             <div class="cert-item">
               <a href="https://www.sololearn.com/certificates/CT-XA53XLZY" target="_blank">
-                <img src="certificates/core.png" alt="CS50 for Lawyers Certificate">
               </a>
-            </div>
-            <div class="cert-item">
-              <a href="https://www.sololearn.com/certificates/CC-F74TMLWA" target="_blank">
-                <img src="certificates/data_struc.png" alt="CS50 for Lawyers Certificate">
-              </a>
+                <img src="certificates/core.png" alt="Python Core Certificate">
             </div>
             <div class="cert-item">
               <a href="https://www.sololearn.com/certificates/CC-FLJS8AOC" target="_blank">
-                <img src="certificates/data_science.png" alt="CS50 for Lawyers Certificate">
+                <img src="certificates/data_science.png" alt="Data Science Certificate">
               </a>
             </div>
           </div>
         </div>
         <button class="carousel-btn next" aria-label="Next">&rarr;</button>
+        <div class="carousel-indicators">
+          <div class="indicator active" data-index="0"></div>
+          <div class="indicator" data-index="1"></div>
+          <div class="indicator" data-index="2"></div>
+          <div class="indicator" data-index="3"></div>
+        </div>
       </div>
     </section>
 
-    <!-- Contact Icons -->
-    <section id="contact" data-aos="fade-up">
+    <!-- Contact -->
+    <section id="contact">
       <h2>Contact</h2>
-      <div class="contact-icons">
-        <!-- Facebook SVG -->
-         <a href="https://www.facebook.com/AdamG00D" target="_blank" title="Facebook">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" fill="none"/>
-          </svg>
-        </a>
-        <!-- LinkedIn SVG -->
-        <a href="https://www.linkedin.com/in/adam-ghanem-556022235/" target="_blank" title="LinkedIn">
-          <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.08 108.1 0 83.57 0 53.75 0 23.14 24.47-1 54.17-1s54.17 24.47 54.17 54.17c0 29.82-24.47 54.93-54.55 54.93h-.01zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89V196h1.3c12.4-23.5 42.6-48.3 87.7-48.3 93.9 0 111.2 61.8 111.2 142.3V448z"/>
-          </svg>
-        </a>
-        <!-- GitHub SVG -->
-        <a href="https://github.com/adamg00d" target="_blank" title="GitHub">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297a12 12 0 00-3.797 23.396c.6.113.82-.26.82-.577v-2.165c-3.338.726-4.033-1.415-4.033-1.415-.546-1.39-1.333-1.76-1.333-1.76-1.089-.745.083-.73.083-.73 1.205.083 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.76-1.605-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.47-2.38 1.236-3.22-.124-.304-.536-1.527.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 016.003 0c2.29-1.552 3.297-1.23 3.297-1.23.657 1.649.245 2.872.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.102.823 2.222v3.293c0 .32.218.694.825.576A12 12 0 0012 .297"/>
-          </svg>
-        </a>
+      <div class="contact">
+        <div class="contact-content">
+          <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+          <div class="contact-icons">
+            <a href="https://www.facebook.com/AdamG00D" target="_blank" title="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adam-ghanem-556022235/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/adamg00d" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer data-aos="fade-up">
+  <footer>
     &copy; 2025 Adam Ghanem. All rights reserved.
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Custom Script -->
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
